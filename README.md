@@ -3,6 +3,9 @@ The first website, client and server, I have ever built (a 2002 high school proj
 
 Nostalgia.
 
+A tiny bit modernized version can be found in the https://github.com/phistuck/music-store-classic/tree/small-fixes-and-utf-8 branch.
+
+
 ## Warnings
 - This code is very old (2002), Internet Explorer specific, not meant to be secure. It is a wonder it even works in any way.
 - It is known to be prone to SQL injections, cross site scripting and anything else you have in mind. Do not use this in production without heavily modifying it (actually, just begin from scratch).
