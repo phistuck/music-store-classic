@@ -1,5 +1,5 @@
-<%response.buffer=true%>
-<title>πιδεμ</title>
+ο»Ώ<%response.buffer=true%>
+<title>Χ Χ™Χ”Χ•Χ</title>
 <!--#include file="../Include/Include.asp" -->
 <%session("qcd")=Request.Form("cdlist")
 if session("qcd")="" then
@@ -12,18 +12,18 @@ end function
 session("qname")=rep(Request.Form("fullname"))
 session("qcc")=Request.Form("cctype") & Request.Form("ccno")
 session("qccex")=Request.Form("ccyy") & "/" & Request.Form("ccmm")
-session("qaddress")=rep(Request.Form("address"))%><title>λξδ ςεϊχιν</title>
+session("qaddress")=rep(Request.Form("address"))%><title>Χ›ΧΧ” ΧΆΧ•ΧªΧ§Χ™Χ</title>
 <form action=buy.asp method=post>
-λξδ ςεϊχιν αψφεπκ μχπεϊ?<br>
+Χ›ΧΧ” ΧΆΧ•ΧªΧ§Χ™Χ Χ‘Χ¨Χ¦Χ•Χ Χ ΧΧ§Χ Χ•Χª?<br>
 <select name=copies>
 <%set c=server.createObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 set r = c.Execute ("select*from CDDatabase where cdno=" & session("qcd"))
 for i=1 to r("copies")%>
 <option value="<%=i%>"><%=i%></option>
 <%next%>
 </select>
-<input type=submit value="ωμη ξιγς"></form>
+<input type=submit value="Χ©ΧΧ— ΧΧ™Χ“ΧΆ"></form>
 <%r.close
 set r=Nothing
 end if%>

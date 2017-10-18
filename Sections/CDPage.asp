@@ -1,7 +1,7 @@
-<%discno=Request.QueryString("cdno")
+ο»Ώ<%discno=Request.QueryString("cdno")
 sq="select*from CDDatabase where cdno=" & discno
 Set c = Server.CreateObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 set r = c.execute(sq)
 title=r("name") & " - " & r("author")%>
 <title><%=title%></title>
@@ -19,7 +19,7 @@ A:link, A:visited, A:active { text-decoration: none; color: lightblue}
         <p align="center"><font size="7"><i><font face="Times New Roman"><%=r("author")%></font></i></font><br>
         </p>
       <p>
-      <div align=right dir=rtl><font size="+2">β'ΰπψ: <%=r("style")%></font></div>
+      <div align=right dir=rtl><font size="+2">Χ’'ΧΧ Χ¨: <%=r("style")%></font></div>
       <br><br>
     </td>
       <td bgcolor="#FFFFCC" bordercolor="#FFFFCC" width="284"> 
@@ -42,7 +42,7 @@ for x=1 to y step 1%><li><%=r("t"&x)%> (<%=r("t"&x&"length")%>)<%next%></b></ol>
   <tr>
 	  <td bgcolor=black></td>
       <td bgcolor="#6699FF" bordercolor="#6699FF"> 
-        <div align=right dir=rtl><b><i>ζξο δωξςδ λεμμ: <%=r("alllength")%></i></b></div>
+        <div align=right dir=rtl><b><i>Χ–ΧΧ Χ”Χ©ΧΧΆΧ” Χ›Χ•ΧΧ: <%=r("alllength")%></i></b></div>
     </td><td></td>
   </tr>
 </table></div>

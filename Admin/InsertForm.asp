@@ -1,7 +1,7 @@
-<!--#include file="../Include/aInclude.asp" -->
-<title>δερτϊ γιρχ μξΰβψ</title>
+ο»Ώ<!--#include file="../Include/aInclude.asp" -->
+<title>Χ”Χ•Χ΅Χ¤Χª Χ“Χ™Χ΅Χ§ ΧΧΧΧ’Χ¨</title>
 <Script>
-function ltrchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν μεςζιιν
+function ltrchk(usnam) //ΧΧ™ΧΧ•Χª ΧΧ•ΧªΧ™Χ•Χª, Χ΅Χ¤Χ¨Χ•Χª Χ•Χ΅Χ™ΧΧ Χ™Χ ΧΧ•ΧΆΧ–Χ™Χ™Χ
 {	letok = "- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.`'()@!#*&:\/1234567890"
 	w=0
 	for (q=0;q<usnam.length;q++)
@@ -12,8 +12,8 @@ function ltrchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν μεςζιιν
 	valid1=(w==usnam.length);
 	if (valid1==false)
 		return (valid1); }
-function infchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν
-{	letok = "ΰαβγδεζηθιλκμξνπορςτσφυχψωϊ- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.`'()@!#*&:\/1234567890"
+function infchk(usnam) //ΧΧ™ΧΧ•Χª ΧΧ•ΧªΧ™Χ•Χª, Χ΅Χ¤Χ¨Χ•Χª Χ•Χ΅Χ™ΧΧ Χ™Χ
+{	letok = "ΧΧ‘Χ’Χ“Χ”Χ•Χ–Χ—ΧΧ™Χ›ΧΧΧΧΧ ΧΧ΅ΧΆΧ¤Χ£Χ¦Χ¥Χ§Χ¨Χ©Χª- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.`'()@!#*&:\/1234567890"
 	w=0
 	for (q=0;q<usnam.length;q++)
 		{ chna=usnam.charAt(q);
@@ -23,8 +23,8 @@ function infchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν
 	valid1=(w==usnam.length);
 	if (valid1==false)
 		return (valid1); }
-function hltrchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν ςαψιιν
-{	letok = "- ΰαβγδεζηθιλκμξνπορςτσφυχψωϊ,.`'\/1234567890"
+function hltrchk(usnam) //ΧΧ™ΧΧ•Χª ΧΧ•ΧªΧ™Χ•Χª, Χ΅Χ¤Χ¨Χ•Χª Χ•Χ΅Χ™ΧΧ Χ™Χ ΧΆΧ‘Χ¨Χ™Χ™Χ
+{	letok = "- ΧΧ‘Χ’Χ“Χ”Χ•Χ–Χ—ΧΧ™Χ›ΧΧΧΧΧ ΧΧ΅ΧΆΧ¤Χ£Χ¦Χ¥Χ§Χ¨Χ©Χª,.`'\/1234567890"
 	w=0
 	for (q=0;q<usnam.length;q++)
 		{ chna=usnam.charAt(q);
@@ -34,7 +34,7 @@ function hltrchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν ςαψιιν
 	valid1=(w==usnam.length);
 	if (valid1==false)
 		return (valid1); }
-function numchk(str) //ΰιξεϊ ρτψεϊ αμαγ
+function numchk(str) //ΧΧ™ΧΧ•Χª Χ΅Χ¤Χ¨Χ•Χª Χ‘ΧΧ‘Χ“
 {	numok="0123456789."
 	c=0;
 	for (i=0;i<str.length;i++)
@@ -47,28 +47,28 @@ function numchk(str) //ΰιξεϊ ρτψεϊ αμαγ
 		return(false); }
 function allchk(author,name,year,time,tracks,genre,copies,info)
 {	if (author.value='')
-	{	alert('ωγδ ων διεφψ ψιχ')
+	{	alert('Χ©Χ“Χ” Χ©Χ Χ”Χ™Χ•Χ¦Χ¨ Χ¨Χ™Χ§')
 		return(false)}
 	if (name.value=='')
-	{	alert('ωγδ ων διεφψ ψιχ')
+	{	alert('Χ©Χ“Χ” Χ©Χ Χ”Χ™Χ•Χ¦Χ¨ Χ¨Χ™Χ§')
 		return(false)}
 	if (genre.value=='')
-	{	alert("ωγδ δβ'ΰπψ ψιχ")
+	{	alert("Χ©Χ“Χ” Χ”Χ’'ΧΧ Χ¨ Χ¨Χ™Χ§")
 		return(false)}
 	if (insert.namestyle.value=='')
-	{	alert('ρεβ μδβγψδ μΰ παηψ')
+	{	alert('Χ΅Χ•Χ’ ΧΧ”Χ’Χ“Χ¨Χ” ΧΧ Χ Χ‘Χ—Χ¨')
 		return(false)}
 	if (year.value=='')
-	{	alert('ωγδ ωπϊ δγιρχ ψιχ')
+	{	alert('Χ©Χ“Χ” Χ©Χ Χª Χ”Χ“Χ™Χ΅Χ§ Χ¨Χ™Χ§')
 		return(false)}
 	if (insert.enhanced.value=='')
-	{	alert('δΰν ιω ϊελο γιβιθμι αϊχμιθεψ?')
+	{	alert('Χ”ΧΧ Χ™Χ© ΧªΧ•Χ›Χ Χ“Χ™Χ’Χ™ΧΧΧ™ Χ‘ΧªΧ§ΧΧ™ΧΧ•Χ¨?')
 		return(false)}
 	if (time.length<=4)
-	{	alert('ζξο δγιρχ ωβει ΰε ψιχ')
+	{	alert('Χ–ΧΧ Χ”Χ“Χ™Χ΅Χ§ Χ©Χ’Χ•Χ™ ΧΧ• Χ¨Χ™Χ§')
 		return(false)}
 	if (tracks.value>=1||tracks.value<=22)
-	{	alert('ξρτψ δωιψιν ηιια μδιεϊ βγεμ ξ - 0 εχθο ξ - 23')
+	{	alert('ΧΧ΅Χ¤Χ¨ Χ”Χ©Χ™Χ¨Χ™Χ Χ—Χ™Χ™Χ‘ ΧΧ”Χ™Χ•Χª Χ’Χ“Χ•Χ Χ - 0 Χ•Χ§ΧΧ Χ - 23')
 		return(false)}
 	if (ltrchk(author)==false)
 		return(false);		
@@ -87,35 +87,35 @@ function allchk(author,name,year,time,tracks,genre,copies,info)
 	if (numchk(copies)==false)
 		return(false);		}
 </script>
-	<h1 align=center>δερτϊ γιρχ μξΰβψ πϊεπιν</h1>
+	<h1 align=center>Χ”Χ•Χ΅Χ¤Χª Χ“Χ™Χ΅Χ§ ΧΧΧΧ’Χ¨ Χ ΧªΧ•Χ Χ™Χ</h1>
 	<form name=insert method=post action=insert.asp 
 	onSubmit="return(allchk(insert.author.value,insert.name.value,insert.year.value,insert.alllength.value,insert.t_no.value,insert.style.value,insert.copies.value,insert.info.value))">
-	<table><tr><th>ΰξο:<br>(ΰπβμιϊ)</th>
+	<table><tr><th>ΧΧΧ:<br>(ΧΧ Χ’ΧΧ™Χª)</th>
 	<td valign=top><input name=author size=30></td></tr>
-	<tr><th>ων γιρχ:<br>(ΰπβμιϊ)</th><td valign=top>
+	<tr><th>Χ©Χ Χ“Χ™Χ΅Χ§:<br>(ΧΧ Χ’ΧΧ™Χª)</th><td valign=top>
 	<input name=name size=30></td></tr>
-	<tr><th>ρεβ μδβγψδ:</th><td valign=top><select size=3 name=namestyle>
-	<option value=rock>ψεχ</option><option value=metal>ξθΰμ</option>
-	<option value=alternative>ΰμθψπθιαιϊ</option></select></td></tr>
+	<tr><th>Χ΅Χ•Χ’ ΧΧ”Χ’Χ“Χ¨Χ”:</th><td valign=top><select size=3 name=namestyle>
+	<option value=rock>Χ¨Χ•Χ§</option><option value=metal>ΧΧΧΧ</option>
+	<option value=alternative>ΧΧΧΧ¨Χ ΧΧ™Χ‘Χ™Χª</option></select></td></tr>
 	<tr>
-      <th>ρεβ γιρχ:</th>
+      <th>Χ΅Χ•Χ’ Χ“Χ™Χ΅Χ§:</th>
       <td valign=top><select size=2 name=type>
-	<option value=album>ΰμαεν</option><option value=single>ριπβμ</option></select></td></tr>
-	<tr><th>ωπδ:<br>(μγεβξδ 2001)</th><td valign=top>
+	<option value=album>ΧΧΧ‘Χ•Χ</option><option value=single>Χ΅Χ™Χ Χ’Χ</option></select></td></tr>
+	<tr><th>Χ©Χ Χ”:<br>(ΧΧ“Χ•Χ’ΧΧ” 2001)</th><td valign=top>
 	<input name=year maxlength=4 size=4></td></tr>
-	<tr><th>ζξο δωξςδ λεμμ:<br>(μγεβξδ 9.05)</th><td valign=top>
+	<tr><th>Χ–ΧΧ Χ”Χ©ΧΧΆΧ” Χ›Χ•ΧΧ:<br>(ΧΧ“Χ•Χ’ΧΧ” 9.05)</th><td valign=top>
 	<input name=alllength size=5 maxlength=5></td></tr>
-	<tr><th>ξρτψ ωιψιν:</th><td valign=top>
+	<tr><th>ΧΧ΅Χ¤Χ¨ Χ©Χ™Χ¨Χ™Χ:</th><td valign=top>
 	<input name=t_no maxlength=2 size=2></td></tr>
-	<tr><th>β'ΰπψ:<br>(ςαψιϊ)</th><td valign=top>
+	<tr><th>Χ’'ΧΧ Χ¨:<br>(ΧΆΧ‘Χ¨Χ™Χª)</th><td valign=top>
 	<input name=style size=30></td></tr>
-	<tr><th>ξιγς:<br>(ςαψιϊ εΰπβμιϊ μμΰ<br>δβαμϊ ϊεειν)</th>
+	<tr><th>ΧΧ™Χ“ΧΆ:<br>(ΧΆΧ‘Χ¨Χ™Χª Χ•ΧΧ Χ’ΧΧ™Χª ΧΧΧ<br>Χ”Χ’Χ‘ΧΧª ΧªΧ•Χ•Χ™Χ)</th>
 	<td valign=top><input name=info size=30 value=""></td></tr>
-	<tr><th>ϊελο γιβιθμι μξηωα:</th><td valign=top>
-	<select size=2 name=enhanced><option value=1>ιω</option>
-	<option value=0>ΰιο</option></select></td></tr>
-	<tr><th>ςεϊχιν:</th><td valign=top><input name=copies size=4>
+	<tr><th>ΧªΧ•Χ›Χ Χ“Χ™Χ’Χ™ΧΧΧ™ ΧΧΧ—Χ©Χ‘:</th><td valign=top>
+	<select size=2 name=enhanced><option value=1>Χ™Χ©</option>
+	<option value=0>ΧΧ™Χ</option></select></td></tr>
+	<tr><th>ΧΆΧ•ΧªΧ§Χ™Χ:</th><td valign=top><input name=copies size=4>
 	</td></tr></table>
-	<input type=submit value=δερσ>
+	<input type=submit value=Χ”Χ•Χ΅Χ£>
 	</form>
 <!--#include file="../Include/aIncludedown.asp" -->

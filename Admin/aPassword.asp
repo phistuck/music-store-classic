@@ -1,7 +1,7 @@
-<!--#include file="../Include/aInclude.asp" -->
-<title>щйрей ссоъ ордм</title>
+п»ї<!--#include file="../Include/aInclude.asp" -->
+<title>Ч©Ч™Ч Ч•Ч™ ЧЎЧЎЧћЧЄ ЧћЧ Ч”Чњ</title>
 <%set c=server.createObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 c.Execute "update users set password='" & request.form("pw") & "' where username='" & request.form("un") & "'"
 response.redirect "Admin.asp"%>
 <!--#include file="../Include/aIncludedown.asp" -->

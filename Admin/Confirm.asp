@@ -1,11 +1,11 @@
-<%response.buffer=true%>
-<title>ΰιξεϊ ξπδμ</title>
+ο»Ώ<%response.buffer=true%>
+<title>ΧΧ™ΧΧ•Χª ΧΧ Χ”Χ</title>
 <!--#include file="../Include/Include.asp" -->
 <%ok="no"
 x=Request.Form("un")
 y=Request.Form("pw")
 Set c = Server.CreateObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 set r = c.execute("select * FROM users WHERE (username='"&x&"')")
 do until ok="yes" or r.eof
 if r("username")=x and r("password")=y then
@@ -17,10 +17,10 @@ r.movenext
 end if
 loop
 if ok="no" then%>
-	βιωϊκ μξγεψ δξπδμιν πγηϊδ,
-	ςχα δχωϊ ριρξδ ΰε ων ξωϊξω μΰ πλεπιν, ΰπΰ πρδ ωπιϊ
-	<a href=../alogin.asp>λΰο</a>, ΰε ηζεψ μγσ δαιϊ
-	<a href=../default.asp>λΰο.</a>
+	Χ’Χ™Χ©ΧªΧ ΧΧΧ“Χ•Χ¨ Χ”ΧΧ Χ”ΧΧ™Χ Χ Χ“Χ—ΧªΧ”,
+	ΧΆΧ§Χ‘ Χ”Χ§Χ©Χª Χ΅Χ™Χ΅ΧΧ” ΧΧ• Χ©Χ ΧΧ©ΧªΧΧ© ΧΧ Χ Χ›Χ•Χ Χ™Χ, ΧΧ Χ Χ Χ΅Χ” Χ©Χ Χ™Χª
+	<a href=../alogin.asp>Χ›ΧΧ</a>, ΧΧ• Χ—Χ–Χ•Χ¨ ΧΧ“Χ£ Χ”Χ‘Χ™Χª
+	<a href=../default.asp>Χ›ΧΧ.</a>
 <%end if
 r.close
 set r = Nothing%>

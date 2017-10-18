@@ -1,4 +1,4 @@
-<!--#include file="../Include/CDsInclude.asp" -->
-<title>λμ δζλειεϊ ωξεψεϊ!!!</title>
+ο»Ώ<!--#include file="../Include/CDsInclude.asp" -->
+<title>Χ›Χ Χ”Χ–Χ›Χ•Χ™Χ•Χª Χ©ΧΧ•Χ¨Χ•Χª!!!</title>
 <body text=lightblue bgcolor=black topmargin=0>
 <center><img src=../Images/CR.jpg></center>

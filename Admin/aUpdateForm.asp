@@ -1,8 +1,8 @@
-<!--#include file="../Include/aInclude.asp" -->
-<title>ωιπει ρρξϊ ξπδμ</title>
+ο»Ώ<!--#include file="../Include/aInclude.asp" -->
+<title>Χ©Χ™Χ Χ•Χ™ Χ΅Χ΅ΧΧª ΧΧ Χ”Χ</title>
 <Script>
-function infchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν
-{	letok = "ΰαβγδεζηθιλκμξνπορςτσφυχψωϊ- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.`'()@!#*&:\/1234567890"
+function infchk(usnam) //ΧΧ™ΧΧ•Χª ΧΧ•ΧªΧ™Χ•Χª, Χ΅Χ¤Χ¨Χ•Χª Χ•Χ΅Χ™ΧΧ Χ™Χ
+{	letok = "ΧΧ‘Χ’Χ“Χ”Χ•Χ–Χ—ΧΧ™Χ›ΧΧΧΧΧ ΧΧ΅ΧΆΧ¤Χ£Χ¦Χ¥Χ§Χ¨Χ©Χª- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.`'()@!#*&:\/1234567890"
 	w=0
 	for (q=0;q<usnam.length;q++)
 		{ chna=usnam.charAt(q);
@@ -14,20 +14,20 @@ function infchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν
 		return (valid); }
 function allchk(un,pw)
 {	if (un.value='')
-	{	alert('ωγδ ων δξωϊξω ψιχ')
+	{	alert('Χ©Χ“Χ” Χ©Χ Χ”ΧΧ©ΧªΧΧ© Χ¨Χ™Χ§')
 		return(false)}
 	if (pw.value=='')
-	{	alert('ωγδ δρρξδ ψιχ')
+	{	alert('Χ©Χ“Χ” Χ”Χ΅Χ΅ΧΧ” Χ¨Χ™Χ§')
 		return(false)}
 	if (infchk(un)==false)
 		return(false);		
 	if (infchk(pw)==false)
 		return(false);		}
 </script>
-<h1 align=center>ωιπει ρρξϊ ξπδμ</h1>
+<h1 align=center>Χ©Χ™Χ Χ•Χ™ Χ΅Χ΅ΧΧª ΧΧ Χ”Χ</h1>
 	<form name=ainsert method=post action=aPassword.asp 
 	onSubmit="return(allchk(ainsert.un.value,ainsert.pw.value))">
-	<table><tr><th>ων ξωϊξω:</th><td valign=top><input name=un size=30></td></tr>
-    <tr><th>ρρξδ:</th><td valign=top><input type=password name=pw size=30></td></tr></table>
-	<input type=submit value=δερσ></form>
+	<table><tr><th>Χ©Χ ΧΧ©ΧªΧΧ©:</th><td valign=top><input name=un size=30></td></tr>
+    <tr><th>Χ΅Χ΅ΧΧ”:</th><td valign=top><input type=password name=pw size=30></td></tr></table>
+	<input type=submit value=Χ”Χ•Χ΅Χ£></form>
 <!--#include file="../Include/aIncludedown.asp" -->

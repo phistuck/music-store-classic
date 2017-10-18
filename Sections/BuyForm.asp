@@ -1,15 +1,15 @@
-<%response.buffer=true%>
-<title>θετρ χπιιδ</title>
+ο»Ώ<%response.buffer=true%>
+<title>ΧΧ•Χ¤Χ΅ Χ§Χ Χ™Χ™Χ”</title>
 <!--#include file="../Include/Include.asp" -->
 <%x=Request.QueryString("cdno")
 Set c = Server.CreateObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 set r = c.execute("select*from CDDatabase")
 r.Filter = "copies<>0"%><Script Language="JavaScript">
-function numchk(str,usnam) //αγιχϊ ΰιξεϊ
+function numchk(str,usnam) //Χ‘Χ“Χ™Χ§Χª ΧΧ™ΧΧ•Χª
 {	form1.cctype.value=form1.ccpre.value 
-//ΰιξεϊ ΰεϊιεϊ ςαψιεϊ αμαγ
-	letok = "- ΰαβγδεζηθιλκμξνπορςτσφυχψωϊ"
+//ΧΧ™ΧΧ•Χª ΧΧ•ΧªΧ™Χ•Χª ΧΆΧ‘Χ¨Χ™Χ•Χª Χ‘ΧΧ‘Χ“
+	letok = "- ΧΧ‘Χ’Χ“Χ”Χ•Χ–Χ—ΧΧ™Χ›ΧΧΧΧΧ ΧΧ΅ΧΆΧ¤Χ£Χ¦Χ¥Χ§Χ¨Χ©Χª"
 	w=0
 	for (q=0;q<usnam.length;q++)
 		{ chna=usnam.charAt(q);
@@ -19,7 +19,7 @@ function numchk(str,usnam) //αγιχϊ ΰιξεϊ
 	valid1=(w==usnam.length);
 	if (valid1==false)
 		return (valid1);
-//ΰιξεϊ ξρτψιν αμαγ
+//ΧΧ™ΧΧ•Χª ΧΧ΅Χ¤Χ¨Χ™Χ Χ‘ΧΧ‘Χ“
 	numok="0123456789"
 	c=0;
 	for (i=0;i<str.length;i++)
@@ -30,7 +30,7 @@ function numchk(str,usnam) //αγιχϊ ΰιξεϊ
 	valid2=(c==str.length);
 	if (valid2==false)
 		return(false);
-//ΰιξεϊ ωγεϊ ξμΰιν
+//ΧΧ™ΧΧ•Χª Χ©Χ“Χ•Χª ΧΧΧΧ™Χ
 	if (str.length!=12)
 		return(false);
 	if (usnam.length<5)
@@ -43,19 +43,19 @@ function numchk(str,usnam) //αγιχϊ ΰιξεϊ
 		return(false);			}
 </script>
 <form name=form1 onSubmit="return(numchk(form1.ccno.value,form1.fullname.value))" action=Copies.asp Method=post>
-	<table border=0><tr><th nowrap width="140">ωξκ δξμΰ:</th><td><Input name=fullname></td></tr>
-	<tr><th nowrap width="140">τψθι λ. ΰωψΰι:</th></tr>
-	<tr><%if x="" then%><th>αηψ/ι γιρχ:</th><td><Select name=cdlist><Option selected></Option>
+	<table border=0><tr><th nowrap width="140">Χ©ΧΧ Χ”ΧΧΧ:</th><td><Input name=fullname></td></tr>
+	<tr><th nowrap width="140">Χ¤Χ¨ΧΧ™ Χ›. ΧΧ©Χ¨ΧΧ™:</th></tr>
+	<tr><%if x="" then%><th>Χ‘Χ—Χ¨/Χ™ Χ“Χ™Χ΅Χ§:</th><td><Select name=cdlist><Option selected></Option>
     <%while not r.eof%><Option value="<%=r("cdno")%>"><%=r("author")%> - <%=r("name")%></Option>
-    <%r.MoveNext%><%WEND%></Select></td><%Else%><th>δγιρχ δπαηψ:</th><td><%=Request.QueryString("name")%>
+    <%r.MoveNext%><%WEND%></Select></td><%Else%><th>Χ”Χ“Χ™Χ΅Χ§ Χ”Χ Χ‘Χ—Χ¨:</th><td><%=Request.QueryString("name")%>
     <input type=hidden name=cdlist value="<%=x%>"></td><%end if%>
-	<tr><th nowrap width="140">ρεβ</th><td><Input name=cc type=radio OnClick="form1.ccpre.value=4580">ειζδ<br>
-    <Input name=cc type=radio OnClick="form1.ccpre.value=4223">ιωψΰλΰψγ</td></tr>
-	<tr><th nowrap width="140">ξρτψ</th><td><Input name=ccno maxlength=12 size=12>
+	<tr><th nowrap width="140">Χ΅Χ•Χ’</th><td><Input name=cc type=radio OnClick="form1.ccpre.value=4580">Χ•Χ™Χ–Χ”<br>
+    <Input name=cc type=radio OnClick="form1.ccpre.value=4223">Χ™Χ©Χ¨ΧΧ›ΧΧ¨Χ“</td></tr>
+	<tr><th nowrap width="140">ΧΧ΅Χ¤Χ¨</th><td><Input name=ccno maxlength=12 size=12>
 	<input disabled name=ccpre size=4><input type=hidden name=cctype></td></tr>
-	<tr><th>ϊεχσ</th><td><Select name=ccmm><%for i=1 to 12 step 1%><Option value="<%=i%>"><%=i%></option><%next%>
+	<tr><th>ΧªΧ•Χ§Χ£</th><td><Select name=ccmm><%for i=1 to 12 step 1%><Option value="<%=i%>"><%=i%></option><%next%>
 	</select><Select name=ccyy><%for q=2002 to 2020 step 1%><Option value="<%=q%>"><%=q%></Option><%next%></select></td>
-	<tr><th width="140" nowrap>λϊεαϊ:<br>(μγεβξδ: γιζιπβεσ 66<br>ϊΰ γεΰψ: 88989<br>ϊμ-ΰαια 45654)</th><td>
+	<tr><th width="140" nowrap>Χ›ΧªΧ•Χ‘Χª:<br>(ΧΧ“Χ•Χ’ΧΧ”: Χ“Χ™Χ–Χ™Χ Χ’Χ•Χ£ 66<br>ΧªΧ Χ“Χ•ΧΧ¨: 88989<br>ΧªΧ-ΧΧ‘Χ™Χ‘ 45654)</th><td>
 	<TextArea name=address cols=24 rows=6></TextArea></td></tr></table>
-	<Input type=submit value=χπδ><Input type=reset value=αθμ>
+	<Input type=submit value=Χ§Χ Χ”><Input type=reset value=Χ‘ΧΧ>
 </form>

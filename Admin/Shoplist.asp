@@ -1,18 +1,18 @@
-<!--#include file="../Include/aInclude.asp" -->
-<title>ψωιξϊ δγιρχιν</title>
+ο»Ώ<!--#include file="../Include/aInclude.asp" -->
+<title>Χ¨Χ©Χ™ΧΧª Χ”Χ“Χ™Χ΅Χ§Χ™Χ</title>
 <%Set c = Server.CreateObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 set r = c.execute("select*from Shop")
 if not r.eof then%>
 <basefont face=arial size=3> 
-<H1><center>ψωιξϊ δχεπιν</center></h1>
+<H1><center>Χ¨Χ©Χ™ΧΧª Χ”Χ§Χ•Χ Χ™Χ</center></h1>
 <table border=1 bordercolor=blue align="center" cellspacing="0">
-  <tr align="center"><th>ων</th>
-    <th>λϊεαϊ</th>
-    <th>γιρχ</th>
-    <th>ςεϊχιν</th>
-    <th>ϊεχσ λψθιρ ΰωψΰι</th>
-    <th>ξρτψ λψθιρ ΰωψΰι</th><th>αιθεμ/ωμιηδ</th></tr>
+  <tr align="center"><th>Χ©Χ</th>
+    <th>Χ›ΧªΧ•Χ‘Χª</th>
+    <th>Χ“Χ™Χ΅Χ§</th>
+    <th>ΧΆΧ•ΧªΧ§Χ™Χ</th>
+    <th>ΧªΧ•Χ§Χ£ Χ›Χ¨ΧΧ™Χ΅ ΧΧ©Χ¨ΧΧ™</th>
+    <th>ΧΧ΅Χ¤Χ¨ Χ›Χ¨ΧΧ™Χ΅ ΧΧ©Χ¨ΧΧ™</th><th>Χ‘Χ™ΧΧ•Χ/Χ©ΧΧ™Χ—Χ”</th></tr>
 <%do until r.eof
 x=r("cd")%>
   <tr align="center">
@@ -25,8 +25,8 @@ x=r("cd")%>
     <td><%=r("copies")%></td>
     <td><%=r("ccex")%></td>
     <td><%=r("cc")%></td>
-    <td><form action=delbuyer.asp method=get><input name=orderno type=hidden value="<%=r("orderno")%>"><input type=submit value='ξηχ χεπδ'></form></td></tr><%r.movenext
+    <td><form action=delbuyer.asp method=get><input name=orderno type=hidden value="<%=r("orderno")%>"><input type=submit value='ΧΧ—Χ§ Χ§Χ•Χ Χ”'></form></td></tr><%r.movenext
 loop
 r.close
-set r = Nothing%></table><%else%>ΰιο χεπιν, λμ δδζξπεϊ δϊαθμε ΰε πωμηε.<%end if%><br>
+set r = Nothing%></table><%else%>ΧΧ™Χ Χ§Χ•Χ Χ™Χ, Χ›Χ Χ”Χ”Χ–ΧΧ Χ•Χª Χ”ΧªΧ‘ΧΧΧ• ΧΧ• Χ Χ©ΧΧ—Χ•.<%end if%><br>
 <!--#include file="../Include/aIncludedown.asp" -->

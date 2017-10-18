@@ -1,5 +1,5 @@
-<!--#include file="../Include/aInclude.asp" -->
-<title>δβγψϊ ϊξεπϊ ςθιτϊ δγιρχ εϊξεπϊ δϊχμιθεψ</title>
+ο»Ώ<!--#include file="../Include/aInclude.asp" -->
+<title>Χ”Χ’Χ“Χ¨Χª ΧªΧΧ•Χ Χª ΧΆΧΧ™Χ¤Χª Χ”Χ“Χ™Χ΅Χ§ Χ•ΧªΧΧ•Χ Χª Χ”ΧªΧ§ΧΧ™ΧΧ•Χ¨</title>
 <%function rep(strInput)
 		strTemp=Replace(strInput,"'","`")
 		rep=strTemp
@@ -16,15 +16,15 @@ qyear=Request.Form("year")
 qcopies=Request.Form("copies")
 qtype=Request.Form("type")
 set c=server.createObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 c.Execute "insert into CDDatabase(name,author,enhanced,namestyle,style,t_no,alllength,info,year,copies,type) values ('"&qname&"','"&qauthor&"','"&qenhanced&"','"&qnamestyle&"','"&qstyle&"','"&qt_no&"','"&qalllength&"','"&qinfo&"','"&qyear&"','"&qcopies&"','"&qtype&"')"
 set r = c.execute ("select*from CDDatabase where name = '" & qname & "' and author = '" & qauthor & "'")
 session("cd")=r("cdno")%>
 	<form action=upload.asp enctype=multipart/form-data method=post>
-	ϊξεπϊ ςθιτϊ δγιρχ (ηιια αΰεψκ: 184 εαψεηα: 177):
+	ΧªΧΧ•Χ Χª ΧΆΧΧ™Χ¤Χª Χ”Χ“Χ™Χ΅Χ§ (Χ—Χ™Χ™Χ‘ Χ‘ΧΧ•Χ¨Χ: 184 Χ•Χ‘Χ¨Χ•Χ—Χ‘: 177):
 	<input type=file size=40 name=file1><BR>
-	ϊξεπϊ δϊχμιθεψ (ηιια αΰεψκ: 219 εαψεηα: 212 μτι ϊαπιϊ
-	<a href=../images/CDTamplate.bmp target=_blank>ζε</a>): 
+	ΧªΧΧ•Χ Χª Χ”ΧªΧ§ΧΧ™ΧΧ•Χ¨ (Χ—Χ™Χ™Χ‘ Χ‘ΧΧ•Χ¨Χ: 219 Χ•Χ‘Χ¨Χ•Χ—Χ‘: 212 ΧΧ¤Χ™ ΧªΧ‘Χ Χ™Χª
+	<a href=../images/CDTamplate.bmp target=_blank>Χ–Χ•</a>): 
 	<input type=file size=40 name=file2><BR>
-	<input type=submit value="δςμδ ϊξεπεϊ"></form>
+	<input type=submit value="Χ”ΧΆΧΧ” ΧªΧΧ•Χ Χ•Χª"></form>
 <!--#include file="../Include/aIncludedown.asp" -->

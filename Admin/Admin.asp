@@ -1,11 +1,11 @@
-<!--#include file="../Include/aInclude.asp" -->
-<title>πιδεμ</title>
-	ωμεν ξπδμ/ϊ, ΰιμε τςεμεϊ αψφεπκ μαφς?
+ο»Ώ<!--#include file="../Include/aInclude.asp" -->
+<title>Χ Χ™Χ”Χ•Χ</title>
+	Χ©ΧΧ•Χ ΧΧ Χ”Χ/Χª, ΧΧ™ΧΧ• Χ¤ΧΆΧ•ΧΧ•Χª Χ‘Χ¨Χ¦Χ•Χ Χ ΧΧ‘Χ¦ΧΆ?
 	<form action=insertform.asp><input type=submit
-	value="δερτϊ γιρχ μξΰβψ"></form><form action=cdsadmin.asp>
-	<input type=submit value="πιδεμ γιρχιν"></form>
-	<form action=shoplist.asp><input type=submit value="πιδεμ χεπιν">
-	</form><form action=aUpdateForm.asp><input type=submit value="ωιπει ρρξδ">
-	</form><form action=aInsertForm.asp><input type=submit value="δερτϊ ξπδμ">
+	value="Χ”Χ•Χ΅Χ¤Χª Χ“Χ™Χ΅Χ§ ΧΧΧΧ’Χ¨"></form><form action=cdsadmin.asp>
+	<input type=submit value="Χ Χ™Χ”Χ•Χ Χ“Χ™Χ΅Χ§Χ™Χ"></form>
+	<form action=shoplist.asp><input type=submit value="Χ Χ™Χ”Χ•Χ Χ§Χ•Χ Χ™Χ">
+	</form><form action=aUpdateForm.asp><input type=submit value="Χ©Χ™Χ Χ•Χ™ Χ΅Χ΅ΧΧ”">
+	</form><form action=aInsertForm.asp><input type=submit value="Χ”Χ•Χ΅Χ¤Χª ΧΧ Χ”Χ">
 	</form>
 <!--#include file="../Include/aIncludedown.asp" -->

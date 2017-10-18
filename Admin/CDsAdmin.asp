@@ -1,16 +1,16 @@
-<!--#include file="../Include/aCDsInclude.asp" -->
-<title>πιδεμ</title>
+ο»Ώ<!--#include file="../Include/aCDsInclude.asp" -->
+<title>Χ Χ™Χ”Χ•Χ</title>
 <body text=lightblue bgcolor=black>
 <%sq="select*from CDDatabase"
 Set c = Server.CreateObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 set r = c.execute(sq)%>
-<title>ψωιξϊ δγιρχιν</title>
-	<H1><center>ψωιξϊ δγιρχιν</center></h1><h2>rOCk</h2>
+<title>Χ¨Χ©Χ™ΧΧª Χ”Χ“Χ™Χ΅Χ§Χ™Χ</title>
+	<H1><center>Χ¨Χ©Χ™ΧΧª Χ”Χ“Χ™Χ΅Χ§Χ™Χ</center></h1><h2>rOCk</h2>
 	<table border=1 bordercolor=#0000FF align="center" cellspacing="0">
-	<tr align="center"><th>ςεϊχιν</th><th>ζξο λεμμ</th>
-	<th>ξρτψ ωιψιν</th><th>ξιγς</th><th>β'ΰπψ</th><th>ωπδ</th>
-	<th>ξαφς/ιν</th><th>ων δγιρχ</th><th>τςεμεϊ πιδεμ</th></tr>
+	<tr align="center"><th>ΧΆΧ•ΧªΧ§Χ™Χ</th><th>Χ–ΧΧ Χ›Χ•ΧΧ</th>
+	<th>ΧΧ΅Χ¤Χ¨ Χ©Χ™Χ¨Χ™Χ</th><th>ΧΧ™Χ“ΧΆ</th><th>Χ’'ΧΧ Χ¨</th><th>Χ©Χ Χ”</th>
+	<th>ΧΧ‘Χ¦ΧΆ/Χ™Χ</th><th>Χ©Χ Χ”Χ“Χ™Χ΅Χ§</th><th>Χ¤ΧΆΧ•ΧΧ•Χª Χ Χ™Χ”Χ•Χ</th></tr>
 <%r.Filter = "namestyle = 'rock'"
   do until r.eof%>
 	<tr align="center"><td><%=r("copies")%></td><td>
@@ -20,17 +20,17 @@ set r = c.execute(sq)%>
 	<td><a href=CDPage.asp?cdno=<%=r("cdno")%>><%=r("name")%></a></td>
 	<td><form action=delete.asp method=get><br>
 	<input name=cdno type=hidden value=<%=r("cdno")%>>
-	<input type=submit value='ξηχ ψωεξδ'></form>
+	<input type=submit value='ΧΧ—Χ§ Χ¨Χ©Χ•ΧΧ”'></form>
 	<form action=modify.asp><input type=hidden name=cdno value=<%=r("cdno")%>>
-	<input type=submit value="ςγλο/ωπδ πϊεπιν"></form></td></tr>
+	<input type=submit value="ΧΆΧ“Χ›Χ/Χ©Χ Χ” Χ ΧªΧ•Χ Χ™Χ"></form></td></tr>
 <%r.movenext
 loop
 r.movefirst%>
 	</table><h2>metal</h2><table border=1 bordercolor=#0000FF
 	align="center" cellspacing="0"><tr align="center">
-	<th>ςεϊχιν</th><th>ζξο λεμμ</th><th>ξρτψ ωιψιν</th>
-	<th>ξιγς</th><th>β'ΰπψ</th><th>ωπδ</th><th>ξαφς/ιν</th>
-	<th>ων δγιρχ</th><th>τςεμεϊ πιδεμ</th></tr>
+	<th>ΧΆΧ•ΧªΧ§Χ™Χ</th><th>Χ–ΧΧ Χ›Χ•ΧΧ</th><th>ΧΧ΅Χ¤Χ¨ Χ©Χ™Χ¨Χ™Χ</th>
+	<th>ΧΧ™Χ“ΧΆ</th><th>Χ’'ΧΧ Χ¨</th><th>Χ©Χ Χ”</th><th>ΧΧ‘Χ¦ΧΆ/Χ™Χ</th>
+	<th>Χ©Χ Χ”Χ“Χ™Χ΅Χ§</th><th>Χ¤ΧΆΧ•ΧΧ•Χª Χ Χ™Χ”Χ•Χ</th></tr>
 <%r.Filter = "namestyle = 'metal'"
   do until r.eof%>
 	<tr align="center"><td><%=r("copies")%></td><td>
@@ -40,17 +40,17 @@ r.movefirst%>
 	<td><a href=CDPage.asp?cdno=<%=r("cdno")%>><%=r("name")%></a></td>
 	<td><form action=delete.asp method=get><br>
 	<input name=cdno type=hidden value=<%=r("cdno")%>>
-	<input type=submit value='ξηχ ψωεξδ'></form>
+	<input type=submit value='ΧΧ—Χ§ Χ¨Χ©Χ•ΧΧ”'></form>
 	<form action=modify.asp><input type=hidden name=cdno value=<%=r("cdno")%>>
-	<input type=submit value="ςγλο/ωπδ πϊεπιν"></form></td></tr>
+	<input type=submit value="ΧΆΧ“Χ›Χ/Χ©Χ Χ” Χ ΧªΧ•Χ Χ™Χ"></form></td></tr>
 <%r.movenext
 loop
 r.movefirst%>
 	</table><h2>alternative</h2><table border=1 bordercolor=#0000FF
 	align="center" cellspacing="0"><tr align="center">
-	<th>ςεϊχιν</th><th>ζξο λεμμ</th><th>ξρτψ ωιψιν</th>
-	<th>ξιγς</th><th>β'ΰπψ</th><th>ωπδ</th><th>ξαφς/ιν</th>
-	<th>ων δγιρχ</th><th>τςεμεϊ πιδεμ</th></tr>
+	<th>ΧΆΧ•ΧªΧ§Χ™Χ</th><th>Χ–ΧΧ Χ›Χ•ΧΧ</th><th>ΧΧ΅Χ¤Χ¨ Χ©Χ™Χ¨Χ™Χ</th>
+	<th>ΧΧ™Χ“ΧΆ</th><th>Χ’'ΧΧ Χ¨</th><th>Χ©Χ Χ”</th><th>ΧΧ‘Χ¦ΧΆ/Χ™Χ</th>
+	<th>Χ©Χ Χ”Χ“Χ™Χ΅Χ§</th><th>Χ¤ΧΆΧ•ΧΧ•Χª Χ Χ™Χ”Χ•Χ</th></tr>
 <%r.Filter = "namestyle = 'alternative'"
   do until r.eof%>
 	<tr align="center"><td><%=r("copies")%></td><td>
@@ -60,9 +60,9 @@ r.movefirst%>
 	<td><a href=CDPage.asp?cdno=<%=r("cdno")%>><%=r("name")%></a></td>
 	<td><form action=delete.asp method=get><br>
 	<input name=cdno type=hidden value=<%=r("cdno")%>>
-	<input type=submit value='ξηχ ψωεξδ'></form>
+	<input type=submit value='ΧΧ—Χ§ Χ¨Χ©Χ•ΧΧ”'></form>
 	<form action=modify.asp><input type=hidden name=cdno value=<%=r("cdno")%>>
-	<input type=submit value="ςγλο/ωπδ πϊεπιν"></form></td></tr>
+	<input type=submit value="ΧΆΧ“Χ›Χ/Χ©Χ Χ” Χ ΧªΧ•Χ Χ™Χ"></form></td></tr>
 <%r.movenext
 loop
 r.close

@@ -1,5 +1,5 @@
-<%response.buffer=true%>
-<title>рйдем</title>
+п»ї<%response.buffer=true%>
+<title>Ч Ч™Ч”Ч•Чњ</title>
 <!--#include file="../Include/Include.asp" -->
 <%function rep(strInput)
 		strTemp=Replace(strInput,"'","`")
@@ -12,12 +12,12 @@ qccex=session("qccex")
 qaddress=session("qaddress")
 qcopies=Request.Form("copies")
 set c=server.createObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 set r = c.execute ("select*from CDDatabase where cdno=" & qcd)
 if r("copies") =< qcopies - 1 then%>
-дджорд беимд, лршад джоръ йеъш ойгй теъчйн езщбъ маи ае щдн рвоше. ан бшцерк мзжеш мгу дфъйзд мзх <a href=../main/mainpage.asp>лап</a>.
+Ч”Ч”Ч–ЧћЧ Ч” Ч‘Ч•ЧЧњЧ”, Ч›Ч ЧЁЧђЧ” Ч”Ч–ЧћЧ ЧЄ Ч™Ч•ЧЄЧЁ ЧћЧ™Ч“Ч™ ЧўЧ•ЧЄЧ§Ч™Чќ Ч•Ч—Ч©Ч‘ЧЄ ЧњЧђЧ ЧђЧ• Ч©Ч”Чќ Ч Ч’ЧћЧЁЧ•. ЧђЧќ Ч‘ЧЁЧ¦Ч•Ч Чљ ЧњЧ—Ч–Ч•ЧЁ ЧњЧ“ЧЈ Ч”Ч¤ЧЄЧ™Ч—Ч” ЧњЧ—ЧҐ <a href=../main/mainpage.asp>Ч›ЧђЧџ</a>.
 <%else
 c.execute "update CDDatabase set copies=copies - " & qcopies & " where cdno=" & qcd 
 c.Execute "insert into Shop(name,cd,ccex,cc,address,copies) values ('"&qname&"','"&qcd&"','"&qccex&"','"&qcc&"','"&qaddress&"','"&qcopies&"')"
-response.redirect "../main/mainpage.asp?comment=джорък рчмид"
+response.redirect "../main/mainpage.asp?comment=Ч”Ч–ЧћЧ ЧЄЧљ Ч Ч§ЧњЧЧ”"
 end if%>

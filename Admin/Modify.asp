@@ -1,7 +1,7 @@
-<!--#include file="../Include/aInclude.asp" -->
-<title>ωιπει/ςγλεο ξιγς γιρχ</title>
+ο»Ώ<!--#include file="../Include/aInclude.asp" -->
+<title>Χ©Χ™Χ Χ•Χ™/ΧΆΧ“Χ›Χ•Χ ΧΧ™Χ“ΧΆ Χ“Χ™Χ΅Χ§</title>
 <Script>
-function ltrchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν μεςζιιν
+function ltrchk(usnam) //ΧΧ™ΧΧ•Χª ΧΧ•ΧªΧ™Χ•Χª, Χ΅Χ¤Χ¨Χ•Χª Χ•Χ΅Χ™ΧΧ Χ™Χ ΧΧ•ΧΆΧ–Χ™Χ™Χ
 {	letok = "- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.`'()@!#*&:\/1234567890"
 	w=0
 	for (q=0;q<usnam.length;q++)
@@ -12,8 +12,8 @@ function ltrchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν μεςζιιν
 	valid1=(w==usnam.length);
 	if (valid1==false)
 		return (valid1); }
-function infchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν
-{	letok = "- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.`'()@!#*&:\/ΰαβγδεζηθιλκμξνπορςτσφυχψωϊ1234567890"
+function infchk(usnam) //ΧΧ™ΧΧ•Χª ΧΧ•ΧªΧ™Χ•Χª, Χ΅Χ¤Χ¨Χ•Χª Χ•Χ΅Χ™ΧΧ Χ™Χ
+{	letok = "- abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,.`'()@!#*&:\/ΧΧ‘Χ’Χ“Χ”Χ•Χ–Χ—ΧΧ™Χ›ΧΧΧΧΧ ΧΧ΅ΧΆΧ¤Χ£Χ¦Χ¥Χ§Χ¨Χ©Χª1234567890"
 	w=0
 	for (q=0;q<usnam.length;q++)
 		{ chna=usnam.charAt(q);
@@ -23,8 +23,8 @@ function infchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν
 	valid1=(w==usnam.length);
 	if (valid1==false)
 		return (valid1); }
-function hltrchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν ςαψιιν
-{	letok = "- ΰαβγδεζηθιλκμξνπορςτσφυχψωϊ,.`'\/1234567890"
+function hltrchk(usnam) //ΧΧ™ΧΧ•Χª ΧΧ•ΧªΧ™Χ•Χª, Χ΅Χ¤Χ¨Χ•Χª Χ•Χ΅Χ™ΧΧ Χ™Χ ΧΆΧ‘Χ¨Χ™Χ™Χ
+{	letok = "- ΧΧ‘Χ’Χ“Χ”Χ•Χ–Χ—ΧΧ™Χ›ΧΧΧΧΧ ΧΧ΅ΧΆΧ¤Χ£Χ¦Χ¥Χ§Χ¨Χ©Χª,.`'\/1234567890"
 	w=0
 	for (q=0;q<usnam.length;q++)
 		{ chna=usnam.charAt(q);
@@ -34,7 +34,7 @@ function hltrchk(usnam) //ΰιξεϊ ΰεϊιεϊ, ρτψεϊ εριξπιν ςαψιιν
 	valid1=(w==usnam.length);
 	if (valid1==false)
 		return (valid1); }
-function numchk(str) //ΰιξεϊ ρτψεϊ αμαγ
+function numchk(str) //ΧΧ™ΧΧ•Χª Χ΅Χ¤Χ¨Χ•Χª Χ‘ΧΧ‘Χ“
 {	numok="0123456789."
 	c=0;
 	for (i=0;i<str.length;i++)
@@ -47,62 +47,68 @@ function numchk(str) //ΰιξεϊ ρτψεϊ αμαγ
 		return(false); }
 function allchk(choice,record)
 {	if (record.value=="")
-	{	alert('ωγδ θχρθ δωιπει ψιχ!! ΰικ αιγιεχ ΰτωψ μωπεϊ ΰν ΰιο ξδ???')
+	{	alert('Χ©Χ“Χ” ΧΧ§Χ΅Χ Χ”Χ©Χ™Χ Χ•Χ™ Χ¨Χ™Χ§!! ΧΧ™Χ Χ‘Χ™Χ“Χ™Χ•Χ§ ΧΧ¤Χ©Χ¨ ΧΧ©Χ Χ•Χª ΧΧ ΧΧ™Χ ΧΧ”???')
 		return(false)}
 	if (choice=='name')
 	{	if (chk(record)==false)
-		{	alert('πϊεο δωιπει ωδεχω ΰιπε ϊεΰν ωγδ ζδ')
+		{	alert('Χ ΧªΧ•Χ Χ”Χ©Χ™Χ Χ•Χ™ Χ©Χ”Χ•Χ§Χ© ΧΧ™Χ Χ• ΧªΧ•ΧΧ Χ©Χ“Χ” Χ–Χ”')
 			return(false)}}
 	if (choice=='author')
 	{	if (chk(record)==false)
-		{	alert('πϊεο δωιπει ωδεχω ΰιπε ϊεΰν ωγδ ζδ')
+		{	alert('Χ ΧªΧ•Χ Χ”Χ©Χ™Χ Χ•Χ™ Χ©Χ”Χ•Χ§Χ© ΧΧ™Χ Χ• ΧªΧ•ΧΧ Χ©Χ“Χ” Χ–Χ”')
 			return(false)}}
 	if (choice=='')
 	{	if (chk(record)==false)
-		{	alert('πϊεο δωιπει ωδεχω ΰιπε ϊεΰν ωγδ ζδ')
+		{	alert('Χ ΧªΧ•Χ Χ”Χ©Χ™Χ Χ•Χ™ Χ©Χ”Χ•Χ§Χ© ΧΧ™Χ Χ• ΧªΧ•ΧΧ Χ©Χ“Χ” Χ–Χ”')
 			return(false)}}
 	if (choice=='')
 	{	if (chk(record)==false)
-		{	alert('πϊεο δωιπει ωδεχω ΰιπε ϊεΰν ωγδ ζδ')
+		{	alert('Χ ΧªΧ•Χ Χ”Χ©Χ™Χ Χ•Χ™ Χ©Χ”Χ•Χ§Χ© ΧΧ™Χ Χ• ΧªΧ•ΧΧ Χ©Χ“Χ” Χ–Χ”')
 			return(false)}}
 	if (choice=='t_no')
 	{	if (tracks.value>=1||tracks.value<=22)
-		{	alert('ξρτψ δωιψιν ηιια μδιεϊ βγεμ ξ - 0 εχθο ξ - 23')
+		{	alert('ΧΧ΅Χ¤Χ¨ Χ”Χ©Χ™Χ¨Χ™Χ Χ—Χ™Χ™Χ‘ ΧΧ”Χ™Χ•Χª Χ’Χ“Χ•Χ Χ - 0 Χ•Χ§ΧΧ Χ - 23')
 			return(false)}
 		if (numchk(record)==false)
-		{	alert('πψων ξρτψ μΰ ηεχι')
+		{	alert('Χ Χ¨Χ©Χ ΧΧ΅Χ¤Χ¨ ΧΧ Χ—Χ•Χ§Χ™')
 			return(false)}}}
 function songchk(name,length)
-{	if (ltrchk(name)==false)
-	{	alert('ων δωιψ ΰιπε ηεχι')
+{	if (name=='')
+	{	alert('Χ—Χ•Χ‘Χ” ΧΧ”Χ–Χ™Χ ΧΧª Χ©Χ Χ”Χ©Χ™Χ¨')
+		return(false)}
+	if (length='')
+	{	alert('Χ—Χ•Χ‘Χ” ΧΧ”Χ–Χ™Χ ΧΧª Χ–ΧΧ Χ”Χ©Χ™Χ¨')
+		return(false)}
+	if (ltrchk(name)==false)
+	{	alert('Χ©Χ Χ”Χ©Χ™Χ¨ ΧΧ™Χ Χ• Χ—Χ•Χ§Χ™')
 		return(false)}
 	if (numchk(length)==false)
-	{	alert('ων δωιψ ΰιπε ηεχι')
+	{	alert('Χ–ΧΧ Χ”Χ©Χ™Χ¨ ΧΧ™Χ Χ• Χ—Χ•Χ§Χ™')
 		return(false)} }
 </Script>
 	<form name=modify method=post action=update.asp 
 	onSubmit="return(allchk(modify.updatechoice.value,modify.record.value))">
 	<input name=cdno type=hidden value=<%=request.querystring("cdno")%>>
-	ξδ αψφεπκ μωπεϊ?<br><select name=updatechoice>
-	<option value=name>ων δγιρχ</option>
-	<option value=author>ων διεφψ</option>
-	<option value=t_no>ξρτψ δωιψιν</option>
-	<option value=info>ξιγς ςμ δγιρχ</option>
-	<option value=alllength>ζξο λεμμ</option>
-	<option value=year>ωπδ</option>
-	<option value=enhanced>ϊελο γιβιθμι</option>
-	<option value=style>β'ΰπψ</option>
-	<option value=namestyle>ρεβ ριγεψι</option>
-	<option value=copies>ξρτψ ςεϊχιν</option></select>
-	<br><input name=record><input type=submit value=ςγλο></form>
+	ΧΧ” Χ‘Χ¨Χ¦Χ•Χ Χ ΧΧ©Χ Χ•Χª?<br><select name=updatechoice>
+	<option value=name>Χ©Χ Χ”Χ“Χ™Χ΅Χ§</option>
+	<option value=author>Χ©Χ Χ”Χ™Χ•Χ¦Χ¨</option>
+	<option value=t_no>ΧΧ΅Χ¤Χ¨ Χ”Χ©Χ™Χ¨Χ™Χ</option>
+	<option value=info>ΧΧ™Χ“ΧΆ ΧΆΧ Χ”Χ“Χ™Χ΅Χ§</option>
+	<option value=alllength>Χ–ΧΧ Χ›Χ•ΧΧ</option>
+	<option value=year>Χ©Χ Χ”</option>
+	<option value=enhanced>ΧªΧ•Χ›Χ Χ“Χ™Χ’Χ™ΧΧΧ™</option>
+	<option value=style>Χ’'ΧΧ Χ¨</option>
+	<option value=namestyle>Χ΅Χ•Χ’ Χ΅Χ™Χ“Χ•Χ¨Χ™</option>
+	<option value=copies>ΧΧ΅Χ¤Χ¨ ΧΆΧ•ΧªΧ§Χ™Χ</option></select>
+	<br><input name=record><input type=submit value=ΧΆΧ“Χ›Χ></form>
 <%set c=server.createObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 r = c.execute ("select*from CDDatabase where cdno=" & request.querystring("cdno"))%>
-	μωιπει ωξεϊ εζξπι ωιψιν: (αωμιηδ ιςαιψ ΰεϊκ μςξεγ δγιρχ)
-	<form method=post action=trackins.asp onsubmit="return(songchk(smodify.tname.value,smodify.tlength.value))">
-	αηψ ξρτψ ωιψ: <select name=trackno><%for tracks=1 to r("t_no")%><option value=t<%=tracks%>>ωιψ ξρτψ <%=tracks%></option>
+	ΧΧ©Χ™Χ Χ•Χ™ Χ©ΧΧ•Χª Χ•Χ–ΧΧ Χ™ Χ©Χ™Χ¨Χ™Χ: (Χ‘Χ©ΧΧ™Χ—Χ” Χ™ΧΆΧ‘Χ™Χ¨ ΧΧ•ΧªΧ ΧΧΆΧΧ•Χ“ Χ”Χ“Χ™Χ΅Χ§)
+	<form method=post action=trackins.asp name="smodify" onsubmit="return(songchk(smodify.tname.value,smodify.tlength.value))">
+	Χ‘Χ—Χ¨ ΧΧ΅Χ¤Χ¨ Χ©Χ™Χ¨: <select name=trackno><%for tracks=1 to r("t_no")%><option value=t<%=tracks%>>Χ©Χ™Χ¨ ΧΧ΅Χ¤Χ¨ <%=tracks%></option>
 <%next%>
-	</select><br>ων δωιψ: <input name=tname><br>ζξο δωιψ:<input name=tlength size=5><br>
-	<input type=submit value="ωπδ ξιγς ςμ δωιψ"><input type=hidden name=cdno value="<%=request.querystring("cdno")%>">
+	</select><br>Χ©Χ Χ”Χ©Χ™Χ¨: <input name=tname><br>Χ–ΧΧ Χ”Χ©Χ™Χ¨:<input name=tlength size=5><br>
+	<input type=submit value="Χ©Χ Χ” ΧΧ™Χ“ΧΆ ΧΆΧ Χ”Χ©Χ™Χ¨"><input type=hidden name=cdno value="<%=request.querystring("cdno")%>">
 	</form>
 <!--#include file="../Include/aIncludedown.asp" -->

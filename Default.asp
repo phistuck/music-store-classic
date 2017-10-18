@@ -1,7 +1,7 @@
-<title>λπιρδ</title>
+ο»Ώ<title>Χ›Χ Χ™Χ΅Χ”</title>
 <!--#include file="Include/Include.asp" -->
 	<center><p align="center"><BR><BR><BR><BR><BR>
-	αψελιν δαΰιν μηπεϊ δγιρχιν δειψθεΰμιϊ μβξψι δψΰωεπδ αιωψΰμ!<br>
-	(αςφν ΰεμι μΰ δψΰωεπδ...)<br>
+	Χ‘Χ¨Χ•Χ›Χ™Χ Χ”Χ‘ΧΧ™Χ ΧΧ—Χ Χ•Χª Χ”Χ“Χ™Χ΅Χ§Χ™Χ Χ”Χ•Χ™Χ¨ΧΧ•ΧΧΧ™Χª ΧΧ’ΧΧ¨Χ™ Χ”Χ¨ΧΧ©Χ•Χ Χ” Χ‘Χ™Χ©Χ¨ΧΧ!<br>
+	(Χ‘ΧΆΧ¦Χ ΧΧ•ΧΧ™ ΧΧ Χ”Χ¨ΧΧ©Χ•Χ Χ”...)<br>
 	<a href=Main/Main.asp><img src="Images/Enter.jpg" border="0"></a>
 	<BR><BR><BR><BR><BR><br><img src=Images/CR.jpg></center>

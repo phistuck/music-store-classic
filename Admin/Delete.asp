@@ -1,8 +1,8 @@
-<!--#include file="../Include/aInclude.asp" -->
-<title>ξηιχϊ ξωϊξω</title>
+ο»Ώ<!--#include file="../Include/aInclude.asp" -->
+<title>ΧΧ—Χ™Χ§Χª ΧΧ©ΧªΧΧ©</title>
 <%x = request.querystring("cdno")
 set c=server.createObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 c.Execute ("delete from CDDatabase where cdno=" & x)
 response.redirect "cdsadmin.asp"%>
 <!--#include file="../Include/aIncludedown.asp" -->

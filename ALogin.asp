@@ -1,11 +1,11 @@
-<%if session("ok")="yes" then
+ן»¿<%if session("ok")="yes" then
 response.redirect "admin/admin.asp"
 end if%>
-<title>חיבור למדור הניהול</title>
+<title>׳—׳™׳‘׳•׳¨ ׳׳׳“׳•׳¨ ׳”׳ ׳™׳”׳•׳</title>
 <!--#include file="Include/Include.asp" -->
 <Script>
-function chk(un) //בדיקת אותיות (עברית ואנגלית)
-{	letok="abcdefghijklmnopqrstuvwxyzאבגדהוזחטיכלמנסעפצקרשת1234567890"
+function chk(un) //׳‘׳“׳™׳§׳× ׳׳•׳×׳™׳•׳× (׳¢׳‘׳¨׳™׳× ׳•׳׳ ׳’׳׳™׳×)
+{	letok="abcdefghijklmnopqrstuvwxyz׳׳‘׳’׳“׳”׳•׳–׳—׳˜׳™׳›׳׳׳ ׳¡׳¢׳₪׳¦׳§׳¨׳©׳×1234567890"
 	w=0
 	for (q=0;q<un.length;q++)
 		{ chna=un.charAt(q);
@@ -16,7 +16,7 @@ function chk(un) //בדיקת אותיות (עברית ואנגלית)
 	return (valid) }
 </Script>
 	<form name=login action=admin/Confirm.asp method=post onSubmit="return(chk(login.un.value))">
-		שם משתמש: <input name=un><BR>
-		סיסמה: <input type=password name=pw><BR>
-		<input type=submit value=התחבר>
+		׳©׳ ׳׳©׳×׳׳©: <input name=un><BR>
+		׳¡׳™׳¡׳׳”: <input type=password name=pw><BR>
+		<input type=submit value=׳”׳×׳—׳‘׳¨>
 	</form>

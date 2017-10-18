@@ -1,17 +1,17 @@
-<%response.buffer=true%>
-<title>πιδεμ</title>
+ο»Ώ<%response.buffer=true%>
+<title>Χ Χ™Χ”Χ•Χ</title>
 <body text=lightblue bgcolor=black>
 <!--#include file="../Include/CDsInclude.asp" -->
 <%sq="select*from CDDatabase"
 Set c = Server.CreateObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 set r = c.execute(sq)%>
-<title>ψωιξϊ δγιρχιν</title>
-<H1><center>ψωιξϊ δγιρχιν</center></h1><%r.Filter = "namestyle = 'rock' and copies <> 0"
+<title>Χ¨Χ©Χ™ΧΧª Χ”Χ“Χ™Χ΅Χ§Χ™Χ</title>
+<H1><center>Χ¨Χ©Χ™ΧΧª Χ”Χ“Χ™Χ΅Χ§Χ™Χ</center></h1><%r.Filter = "namestyle = 'rock' and copies <> 0"
 if not r.eof then%>
 <h2>rOCk</h2>
 <table border=1 bordercolor=blue align=center cellspacing=0 width=600>
-  <tr align="center"><th>ξιγς</th><th>β'ΰπψ</th><th>ωπδ</th><th>ξαφς/ιν</th><th>ων δγιρχ</th></tr><%do until r.eof%>
+  <tr align="center"><th>ΧΧ™Χ“ΧΆ</th><th>Χ’'ΧΧ Χ¨</th><th>Χ©Χ Χ”</th><th>ΧΧ‘Χ¦ΧΆ/Χ™Χ</th><th>Χ©Χ Χ”Χ“Χ™Χ΅Χ§</th></tr><%do until r.eof%>
 	<tr align="center"><td dir=rtl><%=r("info")%></td><td><%=r("style")%></td><td><%=r("year")%></td><td><%=r("author")%></td>
     <td><a href="CDPage.asp?cdno=<%=r("cdno")%>"><%=r("name")%></a></td></tr><%r.movenext
 loop
@@ -20,7 +20,7 @@ end if
 r.Filter = "namestyle = 'metal' and copies <> 0"
 if not r.eof then%></table><h2>mETaL</h2>
 <table border=1 bordercolor=blue align=center cellspacing=0 width=600>
-  <tr align="center"><th>ξιγς</th><th>β'ΰπψ</th><th>ωπδ</th><th>ξαφς/ιν</th><th>ων δγιρχ</th></tr>
+  <tr align="center"><th>ΧΧ™Χ“ΧΆ</th><th>Χ’'ΧΧ Χ¨</th><th>Χ©Χ Χ”</th><th>ΧΧ‘Χ¦ΧΆ/Χ™Χ</th><th>Χ©Χ Χ”Χ“Χ™Χ΅Χ§</th></tr>
 <%do until r.eof%><tr align="center"><td dir=rtl><%=r("info")%></td><td><%=r("style")%></td><td><%=r("year")%></td><td><%=r("author")%></td>
     <td><a href="CDPage.asp?cdno=<%=r("cdno")%>"><%=r("name")%></a></td></tr><%r.movenext
 loop
@@ -29,7 +29,7 @@ end if
 r.Filter = "namestyle = 'alternative' and copies <> 0"
 if not r.eof then%></table><h2>aLTeRNaTIvE</h2>
 <table border=1 bordercolor=blue align=center cellspacing=0 width=600>
-  <tr align="center"><th>ξιγς</th><th>β'ΰπψ</th><th>ωπδ</th><th>ξαφς/ιν</th><th>ων δγιρχ</th></tr><%do until r.eof%>
+  <tr align="center"><th>ΧΧ™Χ“ΧΆ</th><th>Χ’'ΧΧ Χ¨</th><th>Χ©Χ Χ”</th><th>ΧΧ‘Χ¦ΧΆ/Χ™Χ</th><th>Χ©Χ Χ”Χ“Χ™Χ΅Χ§</th></tr><%do until r.eof%>
 	<tr align="center"><td dir=rtl><%=r("info")%></td><td><%=r("style")%></td><td><%=r("year")%></td><td><%=r("author")%></td>
     <td><a href="CDPage.asp?cdno=<%=r("cdno")%>"><%=r("name")%></a></td></tr><%r.movenext
 loop

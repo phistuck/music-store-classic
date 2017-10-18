@@ -1,5 +1,5 @@
-<!--#include file="../Include/aInclude.asp" -->
-<title>δερτϊ δξπδμ</title>
+ο»Ώ<!--#include file="../Include/aInclude.asp" -->
+<title>Χ”Χ•Χ΅Χ¤Χª Χ”ΧΧ Χ”Χ</title>
 <%function rep(strInput)
 		strTemp=Replace(strInput,"'","`")
 		rep=strTemp
@@ -7,9 +7,9 @@ end function
 qun=Request.Form("un")
 qpw=Request.Form("pw")
 set c=server.createObject("ADODB.Connection")
-c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../data.mdb")
+c.open "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("../../db/data.mdb")
 set r = c.Execute ("select*from users where username = '"&qun&"'")
-if not r.eof then%><script>alert('ξωϊξω χιιν');window.history.back()</script>
+if not r.eof then%><script>alert('ΧΧ©ΧªΧΧ© Χ§Χ™Χ™Χ');window.history.back()</script>
 <%else
 c.Execute "insert into users(username,password) values ('"&qun&"','"&qpw&"')"
 response.redirect "admin.asp"
