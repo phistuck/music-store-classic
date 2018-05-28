@@ -44,7 +44,7 @@ Password - `1234`
   (Not required when using the server workarounds below)
 
 ## Sample Data
-You can download the sample data package which includes a database with some usernames and a small selection compact discs, including their images and cover images from my Google Drive -
+You can download the sample data package which includes a database with some usernames and a small selection of compact discs, including their images and cover images from my Google Drive -
 
 https://drive.google.com/open?id=0Bxwga4EKqxwPVkw1cFpJVlFyVms
 
